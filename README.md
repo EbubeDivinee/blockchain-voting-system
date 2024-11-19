@@ -1,7 +1,5 @@
-# blockchain-voting-system
-A smart contract for a transparent and secure blockchain-based voting system
-
 # Blockchain Voting System
+A smart contract for a transparent and secure blockchain-based voting system
 
 ## Group Members
 - Oluebube Onwuamaegbu (oluebubeonwuamaegbu@gmail.com)

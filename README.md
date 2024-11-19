@@ -2,7 +2,7 @@
 A smart contract for a transparent and secure blockchain-based voting system
 
 ## Group Members
-- Oluebube Onwuamaegbu (oluebubeonwuamaegbu@gmail.com)
+- Oluebube Onwuamaegbu (oluebubeonwuamaegbu@gmail.com, oluebube.onwuamaegbu06@myhunter.cuny.edu)
 
 ## Purpose
 This project aims to create a transparent, secure, and tamper-proof voting system using blockchain technology. The system will enable voter registration, secure voting, and transparent result auditing.

@@ -88,7 +88,7 @@ Elections are the foundation of democracy, and blockchain ensures their integrit
 ### **Getting Started**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/blockchain-voting-system.git
+   git clone https://github.com/EbubeDivinee/blockchain-voting-system.git
    ```
 2. Deploy the smart contract to the Ropsten network.
 3. Interact with the system using a web3-enabled application like MetaMask.

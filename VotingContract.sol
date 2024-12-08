@@ -62,10 +62,14 @@ contract VotingContract {
     function castVote(uint _candidateId) external {
         require(electionOngoing, "Election is not ongoing");
         require(!hasVoted[msg.sender], "You have already voted");
-        require(_candidateId > 0 && _candidateId <= candidateCount, "Invalid candidate ID");
+        if (_candidateId > 0 && _candidateId <= candidateCount) {
+            // Voting for a pre-registered candidate
+            votes[_candidateId]++;
+        } else {
+            revert("Invalid candidate ID");
+        }
 
         hasVoted[msg.sender] = true;
-        votes[_candidateId]++;
         emit VoteCasted(msg.sender, _candidateId);
     }
 

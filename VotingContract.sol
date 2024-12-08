@@ -62,8 +62,12 @@ contract VotingContract {
     function castVote(uint _candidateId) external {
         require(electionOngoing, "Election is not ongoing");
         require(!hasVoted[msg.sender], "You have already voted");
+
         if (_candidateId > 0 && _candidateId <= candidateCount) {
             // Voting for a pre-registered candidate
+            votes[_candidateId]++;
+        } else if (approvedWriteIns[candidates[_candidateId]]) {
+            // Voting for an approved write-in candidate
             votes[_candidateId]++;
         } else {
             revert("Invalid candidate ID");
@@ -79,6 +83,20 @@ contract VotingContract {
     function getResults(uint _candidateId) external view returns (uint) {
         require(_candidateId > 0 && _candidateId <= candidateCount, "Invalid candidate ID");
         return votes[_candidateId];
+    }
+
+    /// @notice Retrieves all candidates and their votes
+    /// @return Arrays containing candidate names and their respective vote counts
+    function getAllResults() external view returns (string[] memory, uint[] memory) {
+        string[] memory candidateNames = new string[](candidateCount);
+        uint[] memory candidateVotes = new uint[](candidateCount);
+
+        for (uint i = 1; i <= candidateCount; i++) {
+            candidateNames[i - 1] = candidates[i];
+            candidateVotes[i - 1] = votes[i];
+        }
+
+        return (candidateNames, candidateVotes);
     }
 
     /// @dev Restricts certain functions to the owner

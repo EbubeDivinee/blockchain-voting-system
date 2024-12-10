@@ -1,0 +1,1018 @@
+{
+  "contractName": "IVotingSystem",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "candidateId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "CandidateAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "ElectionEnded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "ElectionStarted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "voter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "candidateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "VoteCasted",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "voter",
+          "type": "address"
+        }
+      ],
+      "name": "VoterRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "WriteInApproved",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_voter",
+          "type": "address"
+        }
+      ],
+      "name": "registerVoter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "startElection",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_candidateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "castVote",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "endElection",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_candidateId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getResults",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllResults",
+      "outputs": [
+        {
+          "internalType": "string[]",
+          "name": "",
+          "type": "string[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"candidateId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"CandidateAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"ElectionEnded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"ElectionStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"candidateId\",\"type\":\"uint256\"}],\"name\":\"VoteCasted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"}],\"name\":\"VoterRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"WriteInApproved\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_candidateId\",\"type\":\"uint256\"}],\"name\":\"castVote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAllResults\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_candidateId\",\"type\":\"uint256\"}],\"name\":\"getResults\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_voter\",\"type\":\"address\"}],\"name\":\"registerVoter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This is an interface, so functions are not implemented here\",\"events\":{\"CandidateAdded(uint256,string)\":{\"params\":{\"candidateId\":\"ID of the candidate added\",\"name\":\"Name of the candidate\"}},\"VoteCasted(address,uint256)\":{\"params\":{\"candidateId\":\"ID of the candidate voted for\",\"voter\":\"Address of the voter\"}},\"VoterRegistered(address)\":{\"params\":{\"voter\":\"Address of the voter\"}},\"WriteInApproved(string)\":{\"params\":{\"name\":\"Name of the approved write-in candidate\"}}},\"kind\":\"dev\",\"methods\":{\"castVote(uint256)\":{\"params\":{\"_candidateId\":\"ID of the candidate to vote for\"}},\"getAllResults()\":{\"returns\":{\"_0\":\"Arrays of candidate names and their vote counts\"}},\"getResults(uint256)\":{\"params\":{\"_candidateId\":\"ID of the candidate\"},\"returns\":{\"_0\":\"Number of votes for the candidate\"}},\"registerVoter(address)\":{\"params\":{\"_voter\":\"Address of the voter\"}}},\"title\":\"Blockchain Voting System Interface\",\"version\":1},\"userdoc\":{\"events\":{\"CandidateAdded(uint256,string)\":{\"notice\":\"Emitted when a candidate is added\"},\"ElectionEnded()\":{\"notice\":\"Emitted when the election ends\"},\"ElectionStarted()\":{\"notice\":\"Emitted when the election starts\"},\"VoteCasted(address,uint256)\":{\"notice\":\"Emitted when a vote is cast\"},\"VoterRegistered(address)\":{\"notice\":\"Emitted when a voter registers\"},\"WriteInApproved(string)\":{\"notice\":\"Emitted when a write-in candidate is approved\"}},\"kind\":\"user\",\"methods\":{\"castVote(uint256)\":{\"notice\":\"Casts a vote for a candidate\"},\"endElection()\":{\"notice\":\"Ends the election\"},\"getAllResults()\":{\"notice\":\"Retrieves results for all candidates\"},\"getResults(uint256)\":{\"notice\":\"Retrieves results for a specific candidate\"},\"registerVoter(address)\":{\"notice\":\"Registers a voter\"},\"startElection()\":{\"notice\":\"Starts the election\"}},\"notice\":\"Defines the structure for a transparent and secure voting system\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IVotingSystem.sol\":\"IVotingSystem\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IVotingSystem.sol\":{\"keccak256\":\"0x7d7c7aad2308c29c3078e0285738555253465296deafb41e33dd271f6d9d124c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0784ac15497076265ce399af6eb9f1091987e1e302283c640c5e1ad915eb75b5\",\"dweb:/ipfs/QmbBwrvFtq2LFYU8bwthpMaVWHH98uMpJUJ982oNaZyr4n\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n/// @title Blockchain Voting System Interface\r\n/// @notice Defines the structure for a transparent and secure voting system\r\n/// @dev This is an interface, so functions are not implemented here\r\ninterface IVotingSystem {\r\n    /// @notice Emitted when a voter registers\r\n    /// @param voter Address of the voter\r\n    event VoterRegistered(address voter);\r\n\r\n    /// @notice Emitted when a vote is cast\r\n    /// @param voter Address of the voter\r\n    /// @param candidateId ID of the candidate voted for\r\n    event VoteCasted(address voter, uint candidateId);\r\n\r\n    /// @notice Emitted when the election starts\r\n    event ElectionStarted();\r\n\r\n    /// @notice Emitted when the election ends\r\n    event ElectionEnded();\r\n\r\n    /// @notice Emitted when a candidate is added\r\n    /// @param candidateId ID of the candidate added\r\n    /// @param name Name of the candidate\r\n    event CandidateAdded(uint candidateId, string name);\r\n\r\n    /// @notice Emitted when a write-in candidate is approved\r\n    /// @param name Name of the approved write-in candidate\r\n    event WriteInApproved(string name);\r\n\r\n    /// @notice Registers a voter\r\n    /// @param _voter Address of the voter\r\n    function registerVoter(address _voter) external;\r\n\r\n    /// @notice Starts the election\r\n    function startElection() external;\r\n\r\n    /// @notice Casts a vote for a candidate\r\n    /// @param _candidateId ID of the candidate to vote for\r\n    function castVote(uint _candidateId) external;\r\n\r\n    /// @notice Ends the election\r\n    function endElection() external;\r\n\r\n    /// @notice Retrieves results for a specific candidate\r\n    /// @param _candidateId ID of the candidate\r\n    /// @return Number of votes for the candidate\r\n    function getResults(uint _candidateId) external view returns (uint);\r\n\r\n    /// @notice Retrieves results for all candidates\r\n    /// @return Arrays of candidate names and their vote counts\r\n    function getAllResults() external view returns (string[] memory, uint[] memory);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\pbeau\\Blockchain\\blockchain-voting-system\\contracts\\IVotingSystem.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IVotingSystem.sol",
+    "exportedSymbols": {
+      "IVotingSystem": [
+        71
+      ]
+    },
+    "id": 72,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IVotingSystem",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2,
+          "nodeType": "StructuredDocumentation",
+          "src": "60:195:0",
+          "text": "@title Blockchain Voting System Interface\n @notice Defines the structure for a transparent and secure voting system\n @dev This is an interface, so functions are not implemented here"
+        },
+        "fullyImplemented": false,
+        "id": 71,
+        "linearizedBaseContracts": [
+          71
+        ],
+        "name": "IVotingSystem",
+        "nameLocation": "265:13:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 3,
+              "nodeType": "StructuredDocumentation",
+              "src": "286:85:0",
+              "text": "@notice Emitted when a voter registers\n @param voter Address of the voter"
+            },
+            "eventSelector": "b6be2187d059cc2a55fe29e0e503b566e1e0f8c8780096e185429350acffd3dd",
+            "id": 7,
+            "name": "VoterRegistered",
+            "nameLocation": "383:15:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "voter",
+                  "nameLocation": "407:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7,
+                  "src": "399:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "399:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "398:15:0"
+            },
+            "src": "377:37:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 8,
+              "nodeType": "StructuredDocumentation",
+              "src": "422:140:0",
+              "text": "@notice Emitted when a vote is cast\n @param voter Address of the voter\n @param candidateId ID of the candidate voted for"
+            },
+            "eventSelector": "d0e6c39f2e086dc49f1524b47725526a56945cd1ff661f37976f1725a1e56986",
+            "id": 14,
+            "name": "VoteCasted",
+            "nameLocation": "574:10:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "voter",
+                  "nameLocation": "593:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "585:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "585:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "candidateId",
+                  "nameLocation": "605:11:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "600:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "584:33:0"
+            },
+            "src": "568:50:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 15,
+              "nodeType": "StructuredDocumentation",
+              "src": "626:44:0",
+              "text": "@notice Emitted when the election starts"
+            },
+            "eventSelector": "c475c26aa25ed8e85a7faa790e5f63b5d7ee1025f12821f4c9bfddd36ab4d112",
+            "id": 17,
+            "name": "ElectionStarted",
+            "nameLocation": "682:15:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "697:2:0"
+            },
+            "src": "676:24:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 18,
+              "nodeType": "StructuredDocumentation",
+              "src": "708:42:0",
+              "text": "@notice Emitted when the election ends"
+            },
+            "eventSelector": "66ec723071e4bb646f7b35d31bc2dee8510979bd8c180edd0690d4f5e802f1e4",
+            "id": 20,
+            "name": "ElectionEnded",
+            "nameLocation": "762:13:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 19,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "775:2:0"
+            },
+            "src": "756:22:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 21,
+              "nodeType": "StructuredDocumentation",
+              "src": "786:142:0",
+              "text": "@notice Emitted when a candidate is added\n @param candidateId ID of the candidate added\n @param name Name of the candidate"
+            },
+            "eventSelector": "e83b2a43e7e82d975c8a0a6d2f045153c869e111136a34d1889ab7b598e396a3",
+            "id": 27,
+            "name": "CandidateAdded",
+            "nameLocation": "940:14:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "candidateId",
+                  "nameLocation": "960:11:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27,
+                  "src": "955:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "980:4:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27,
+                  "src": "973:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "973:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:31:0"
+            },
+            "src": "934:52:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 28,
+              "nodeType": "StructuredDocumentation",
+              "src": "994:118:0",
+              "text": "@notice Emitted when a write-in candidate is approved\n @param name Name of the approved write-in candidate"
+            },
+            "eventSelector": "ef3a93bd3eddf25ebe7f30119c8b78c2b8e47c9a0b3531af4d5658b9171a386f",
+            "id": 32,
+            "name": "WriteInApproved",
+            "nameLocation": "1124:15:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nameLocation": "1147:4:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32,
+                  "src": "1140:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:13:0"
+            },
+            "src": "1118:35:0"
+          },
+          {
+            "documentation": {
+              "id": 33,
+              "nodeType": "StructuredDocumentation",
+              "src": "1161:73:0",
+              "text": "@notice Registers a voter\n @param _voter Address of the voter"
+            },
+            "functionSelector": "38db6dd3",
+            "id": 38,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerVoter",
+            "nameLocation": "1249:13:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 36,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35,
+                  "mutability": "mutable",
+                  "name": "_voter",
+                  "nameLocation": "1271:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38,
+                  "src": "1263:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 34,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1263:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1262:16:0"
+            },
+            "returnParameters": {
+              "id": 37,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1287:0:0"
+            },
+            "scope": 71,
+            "src": "1240:48:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 39,
+              "nodeType": "StructuredDocumentation",
+              "src": "1296:31:0",
+              "text": "@notice Starts the election"
+            },
+            "functionSelector": "62d73eb8",
+            "id": 42,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "startElection",
+            "nameLocation": "1342:13:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1355:2:0"
+            },
+            "returnParameters": {
+              "id": 41,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1366:0:0"
+            },
+            "scope": 71,
+            "src": "1333:34:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 43,
+              "nodeType": "StructuredDocumentation",
+              "src": "1375:101:0",
+              "text": "@notice Casts a vote for a candidate\n @param _candidateId ID of the candidate to vote for"
+            },
+            "functionSelector": "3eb76b9c",
+            "id": 48,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "castVote",
+            "nameLocation": "1491:8:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 45,
+                  "mutability": "mutable",
+                  "name": "_candidateId",
+                  "nameLocation": "1505:12:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48,
+                  "src": "1500:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1500:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1499:19:0"
+            },
+            "returnParameters": {
+              "id": 47,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1527:0:0"
+            },
+            "scope": 71,
+            "src": "1482:46:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 49,
+              "nodeType": "StructuredDocumentation",
+              "src": "1536:29:0",
+              "text": "@notice Ends the election"
+            },
+            "functionSelector": "59f78468",
+            "id": 52,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "endElection",
+            "nameLocation": "1580:11:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1591:2:0"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1602:0:0"
+            },
+            "scope": 71,
+            "src": "1571:32:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 53,
+              "nodeType": "StructuredDocumentation",
+              "src": "1611:154:0",
+              "text": "@notice Retrieves results for a specific candidate\n @param _candidateId ID of the candidate\n @return Number of votes for the candidate"
+            },
+            "functionSelector": "81a60c0d",
+            "id": 60,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getResults",
+            "nameLocation": "1780:10:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 55,
+                  "mutability": "mutable",
+                  "name": "_candidateId",
+                  "nameLocation": "1796:12:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60,
+                  "src": "1791:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1791:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1790:19:0"
+            },
+            "returnParameters": {
+              "id": 59,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 60,
+                  "src": "1833:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1833:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1832:6:0"
+            },
+            "scope": 71,
+            "src": "1771:68:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 61,
+              "nodeType": "StructuredDocumentation",
+              "src": "1847:113:0",
+              "text": "@notice Retrieves results for all candidates\n @return Arrays of candidate names and their vote counts"
+            },
+            "functionSelector": "76d9be08",
+            "id": 70,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllResults",
+            "nameLocation": "1975:13:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1988:2:0"
+            },
+            "returnParameters": {
+              "id": 69,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 65,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "2014:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 63,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2014:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 64,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2014:8:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 68,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "2031:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 66,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2031:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 67,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2031:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2013:32:0"
+            },
+            "scope": 71,
+            "src": "1966:80:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 72,
+        "src": "255:1794:0",
+        "usedErrors": [],
+        "usedEvents": [
+          7,
+          14,
+          17,
+          20,
+          27,
+          32
+        ]
+      }
+    ],
+    "src": "33:2018:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.21+commit.d9974bed.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-12-10T01:46:07.214Z",
+  "devdoc": {
+    "details": "This is an interface, so functions are not implemented here",
+    "events": {
+      "CandidateAdded(uint256,string)": {
+        "params": {
+          "candidateId": "ID of the candidate added",
+          "name": "Name of the candidate"
+        }
+      },
+      "VoteCasted(address,uint256)": {
+        "params": {
+          "candidateId": "ID of the candidate voted for",
+          "voter": "Address of the voter"
+        }
+      },
+      "VoterRegistered(address)": {
+        "params": {
+          "voter": "Address of the voter"
+        }
+      },
+      "WriteInApproved(string)": {
+        "params": {
+          "name": "Name of the approved write-in candidate"
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "castVote(uint256)": {
+        "params": {
+          "_candidateId": "ID of the candidate to vote for"
+        }
+      },
+      "getAllResults()": {
+        "returns": {
+          "_0": "Arrays of candidate names and their vote counts"
+        }
+      },
+      "getResults(uint256)": {
+        "params": {
+          "_candidateId": "ID of the candidate"
+        },
+        "returns": {
+          "_0": "Number of votes for the candidate"
+        }
+      },
+      "registerVoter(address)": {
+        "params": {
+          "_voter": "Address of the voter"
+        }
+      }
+    },
+    "title": "Blockchain Voting System Interface",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "CandidateAdded(uint256,string)": {
+        "notice": "Emitted when a candidate is added"
+      },
+      "ElectionEnded()": {
+        "notice": "Emitted when the election ends"
+      },
+      "ElectionStarted()": {
+        "notice": "Emitted when the election starts"
+      },
+      "VoteCasted(address,uint256)": {
+        "notice": "Emitted when a vote is cast"
+      },
+      "VoterRegistered(address)": {
+        "notice": "Emitted when a voter registers"
+      },
+      "WriteInApproved(string)": {
+        "notice": "Emitted when a write-in candidate is approved"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "castVote(uint256)": {
+        "notice": "Casts a vote for a candidate"
+      },
+      "endElection()": {
+        "notice": "Ends the election"
+      },
+      "getAllResults()": {
+        "notice": "Retrieves results for all candidates"
+      },
+      "getResults(uint256)": {
+        "notice": "Retrieves results for a specific candidate"
+      },
+      "registerVoter(address)": {
+        "notice": "Registers a voter"
+      },
+      "startElection()": {
+        "notice": "Starts the election"
+      }
+    },
+    "notice": "Defines the structure for a transparent and secure voting system",
+    "version": 1
+  }
+}

@@ -93,6 +93,25 @@ Elections are the foundation of democracy, and blockchain ensures their integrit
 2. Deploy the smart contract to the Ropsten network.
 3. Interact with the system using a web3-enabled application like MetaMask.
 
+## Testing
+To ensure the smart contract behaves as expected, a comprehensive suite of tests has been written. Follow these steps to run the tests:
+1. Install Truffle:
+   ```bash
+   npm install -g truffle
+   ```
+2. Compile the contracts:
+   ```bash
+   truffle compile
+   ```
+3. Run the tests:
+   ```bash
+   truffle test
+   ```
+All tests should pass successfully. The suite covers:
+- Core functionality (e.g., voting, results)
+- Edge cases (e.g., double voting, invalid candidates)
+
+
 ---
 
 ### **Credits**

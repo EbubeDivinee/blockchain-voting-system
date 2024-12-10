@@ -36,7 +36,13 @@ contract VotingContract is IVotingSystem {
     /// @notice Restricts functions to specific election phases
     /// @param _phase The required phase for the function to execute
     modifier inPhase(ElectionPhase _phase) {
-        require(phase == _phase, "Invalid phase for this action");
+        if (_phase == ElectionPhase.Voting) {
+            require(phase == _phase, "Election is not ongoing");
+        } else if (_phase == ElectionPhase.Registration) {
+            require(phase == _phase, "Cannot add candidates during an election");
+        } else {
+            require(phase == _phase, "Invalid phase for this action");
+        }
         _;
     }
 

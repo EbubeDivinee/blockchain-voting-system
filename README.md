@@ -73,8 +73,42 @@ Here’s a breakdown of the functions and events that power the system:
 
 ---
 
+### **Spam Prevention and Security Measures**
+
+1. **Duplicate Prevention**:  
+   - **Voter Registration**: Ensures that a voter can only be registered once by checking their Ethereum address. Duplicate registrations are rejected with appropriate error messages.
+   - **Candidate Names**: Candidate names are hashed to prevent duplicates, ensuring no two candidates can have the same name.
+
+2. **Vote Integrity**:  
+   - **Single Vote Enforcement**: Registered voters are allowed to vote only once. Attempts to vote multiple times are automatically blocked.
+   - **Invalid Candidate Prevention**: Only candidates who are registered or approved as write-ins can receive votes. Votes for invalid candidates are rejected.
+
+3. **Phased Operations**:  
+   - Each election phase (Registration, Voting, and Ended) is strictly enforced. Operations like voter registration or casting votes are only allowed in their respective phases.
+
+4. **Access Control**:  
+   - **Owner-Only Functions**: Sensitive operations like starting or ending the election, transitioning phases, and adding candidates are restricted to the contract owner.
+
+5. **Write-In Approval**:  
+   - Write-in candidates are securely hashed and require explicit approval by the owner during the Registration phase. This ensures that only valid write-ins are counted.
+
+6. **Event Logging**:  
+   - Real-time event emission for critical actions (e.g., voter registration, vote casting, and phase changes) ensures transparency and enables off-chain monitoring.
+
+7. **Gas Efficiency**:  
+   - Optimized operations, such as voting and retrieving results, to minimize gas usage while maintaining functionality.
+
+---
+
 ### **Why It Matters**
 Elections are the foundation of democracy, and blockchain ensures their integrity. By adopting this system, we can build trust and confidence in elections worldwide, empowering people to have their voices heard without fear of fraud or tampering.
+
+---
+
+### **Additional Notes**
+
+- **Testing for Edge Cases**: Comprehensive tests ensure the contract behaves correctly under various scenarios, such as double voting attempts, phase transition violations, and invalid candidate voting.
+- **Transparency in Results**: All votes and results are logged immutably, providing a trustworthy audit trail.
 
 ---
 

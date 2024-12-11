@@ -99,7 +99,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -112,7 +113,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -131,7 +133,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -144,7 +147,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -163,7 +167,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -182,7 +187,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -195,7 +201,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -208,7 +215,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -227,7 +235,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -325,7 +334,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -343,7 +353,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -379,7 +390,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"candidateId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"CandidateAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"ElectionEnded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[],\"name\":\"ElectionStarted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"candidateId\",\"type\":\"uint256\"}],\"name\":\"VoteCasted\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"}],\"name\":\"VoterRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"WriteInApproved\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"addCandidate\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"name\":\"approveWriteIn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"approvedWriteIns\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"candidateCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"candidates\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_candidateId\",\"type\":\"uint256\"}],\"name\":\"castVote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"electionOngoing\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"emitResults\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"endElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAllResults\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_candidateId\",\"type\":\"uint256\"}],\"name\":\"getResults\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"start\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"end\",\"type\":\"uint256\"}],\"name\":\"getResultsByRange\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"},{\"internalType\":\"uint256[]\",\"name\":\"\",\"type\":\"uint256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"hasVoted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"isRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"phase\",\"outputs\":[{\"internalType\":\"enum VotingContract.ElectionPhase\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_voter\",\"type\":\"address\"}],\"name\":\"registerVoter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum VotingContract.ElectionPhase\",\"name\":\"_phase\",\"type\":\"uint8\"}],\"name\":\"setPhase\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startElection\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"votes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"CandidateAdded(uint256,string)\":{\"params\":{\"candidateId\":\"ID of the candidate added\",\"name\":\"Name of the candidate\"}},\"VoteCasted(address,uint256)\":{\"params\":{\"candidateId\":\"ID of the candidate voted for\",\"voter\":\"Address of the voter\"}},\"VoterRegistered(address)\":{\"params\":{\"voter\":\"Address of the voter\"}},\"WriteInApproved(string)\":{\"params\":{\"name\":\"Name of the approved write-in candidate\"}}},\"kind\":\"dev\",\"methods\":{\"addCandidate(string)\":{\"params\":{\"_name\":\"The name of the candidate\"}},\"approveWriteIn(string)\":{\"params\":{\"_name\":\"The name of the write-in candidate\"}},\"castVote(uint256)\":{\"params\":{\"_candidateId\":\"The ID of the candidate to vote for\"}},\"getAllResults()\":{\"returns\":{\"_0\":\"Arrays containing candidate names and their respective vote counts\"}},\"getResults(uint256)\":{\"params\":{\"_candidateId\":\"The ID of the candidate\"},\"returns\":{\"_0\":\"The number of votes for the candidate\"}},\"getResultsByRange(uint256,uint256)\":{\"params\":{\"end\":\"The ending candidate ID (inclusive)\",\"start\":\"The starting candidate ID (inclusive)\"},\"returns\":{\"_0\":\"Arrays containing candidate names and their respective vote counts\"}},\"registerVoter(address)\":{\"params\":{\"_voter\":\"Address of the voter\"}},\"setPhase(uint8)\":{\"params\":{\"_phase\":\"The phase to transition to\"}}},\"title\":\"Blockchain Voting System\",\"version\":1},\"userdoc\":{\"events\":{\"CandidateAdded(uint256,string)\":{\"notice\":\"Emitted when a candidate is added\"},\"ElectionEnded()\":{\"notice\":\"Emitted when the election ends\"},\"ElectionStarted()\":{\"notice\":\"Emitted when the election starts\"},\"VoteCasted(address,uint256)\":{\"notice\":\"Emitted when a vote is cast\"},\"VoterRegistered(address)\":{\"notice\":\"Emitted when a voter registers\"},\"WriteInApproved(string)\":{\"notice\":\"Emitted when a write-in candidate is approved\"}},\"kind\":\"user\",\"methods\":{\"addCandidate(string)\":{\"notice\":\"Adds a new candidate during the registration phase\"},\"approveWriteIn(string)\":{\"notice\":\"Approves a write-in candidate during the registration phase\"},\"castVote(uint256)\":{\"notice\":\"Allows a voter to cast their vote\"},\"constructor\":{\"notice\":\"Initializes the contract and sets the owner\"},\"emitResults()\":{\"notice\":\"Retrieves results for all candidates (emit event for off-chain processing)\"},\"endElection()\":{\"notice\":\"Ends the election, transitioning to the ended phase\"},\"getAllResults()\":{\"notice\":\"Retrieves results for all candidates\"},\"getResults(uint256)\":{\"notice\":\"Retrieves results for a specific candidate\"},\"getResultsByRange(uint256,uint256)\":{\"notice\":\"Retrieves results for a range of candidates\"},\"registerVoter(address)\":{\"notice\":\"Registers a voter\"},\"setPhase(uint8)\":{\"notice\":\"Sets the current phase of the election\"},\"startElection()\":{\"notice\":\"Starts the election, transitioning to the voting phase\"}},\"notice\":\"Implements a secure and transparent voting system\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/VotingContract.sol\":\"VotingContract\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IVotingSystem.sol\":{\"keccak256\":\"0x7d7c7aad2308c29c3078e0285738555253465296deafb41e33dd271f6d9d124c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0784ac15497076265ce399af6eb9f1091987e1e302283c640c5e1ad915eb75b5\",\"dweb:/ipfs/QmbBwrvFtq2LFYU8bwthpMaVWHH98uMpJUJ982oNaZyr4n\"]},\"project:/contracts/VotingContract.sol\":{\"keccak256\":\"0x998a94286c80a1b196c7ff39cb848a5a97e20eb26e8a8323149a5c71e8ecc07a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9b307037c84f75c7bad060a6031a51bfa707ac0bc21d4e3ad7774615be933fb4\",\"dweb:/ipfs/QmaJ5urTqQuNVLh6iBiKBsJSVzJKAk8XmzrWAgy9MhPrfn\"]}},\"version\":1}",
@@ -27992,9 +28004,23 @@
     "name": "solc",
     "version": "0.8.21+commit.d9974bed.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1733953447392": {
+      "events": {},
+      "links": {},
+      "address": "0xf67C94A3410A3CBE89ab3B683A9c73Ec3BC58fd3",
+      "transactionHash": "0x1744be0b807b589b68bb8a892ead2717ae28cdc87ca6ba8c3e4a02033eafa992"
+    },
+    "1733955007219": {
+      "events": {},
+      "links": {},
+      "address": "0x04f258ed8b443D08037dcC306B8295E4f8d25B28",
+      "transactionHash": "0x3951bb5fff192dd775e4e08b707466f2d4790706c416befd3b1e262c8ca2208d"
+    }
+  },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-12-11T20:25:08.351Z",
+  "updatedAt": "2024-12-11T22:10:48.462Z",
+  "networkType": "ethereum",
   "devdoc": {
     "events": {
       "CandidateAdded(uint256,string)": {
